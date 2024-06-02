@@ -27,7 +27,7 @@ jobs:
       - name: Install requirements
         run: npm install
       - name: Run Back-End
-        run: npm run start-be
+        run: npm run start-be &
       - name: Run Front-End
         run: npm run start-fe
   
@@ -49,7 +49,7 @@ jobs:
       - name: Prepatre prerequisites
         run: |
           npm install
-          npm run start-be
+          npm run start-be &
           npm run start-fe
       - name: Execute UI testst
         run: npm run test-ui
