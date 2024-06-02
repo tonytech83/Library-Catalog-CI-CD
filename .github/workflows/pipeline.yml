@@ -28,8 +28,12 @@ jobs:
         run: npm install
       - name: Run Back-End
         run: npm run start-be &
+      - name: Wait for Back-End to start
+        run: sleep 10
       - name: Run Front-End
-        run: npm run start-fe
+        run: npm run start-fe &
+      - name: Wait for Front-End to start
+        run: sleep 10
   
   ui-tests:
     needs: build
@@ -50,7 +54,9 @@ jobs:
         run: |
           npm install
           npm run start-be &
-          npm run start-fe
+          sleep 10
+          npm run start-fe &
+          sleep 10
       - name: Execute UI testst
         run: npm run test-ui
 
