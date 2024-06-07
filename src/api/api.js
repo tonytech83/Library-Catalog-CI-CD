@@ -1,10 +1,10 @@
 import * as config from "../config.js";
 
+export const settings = config.settings;
+
 // export const settings = {
 //     host: '',
 // };
-
-export const settings = config.settings.host
 
 async function request(url, options) {
     try {
