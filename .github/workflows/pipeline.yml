@@ -62,7 +62,7 @@ jobs:
   deploy-backend:
     needs: ui-tests
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy BackEnd to production
@@ -72,9 +72,9 @@ jobs:
           api-key: ${{ secrets.RENDER_API }}
 
   deploy-frontend:
-    needs: deploy-backend
+    needs: ui-tests
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy FrontEnd to production
