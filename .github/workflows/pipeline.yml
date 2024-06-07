@@ -46,7 +46,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Replace the config settings
-        run: echo "export const settings = { host:\"http://localhost:3000\" }" > src/config.js
+        run: echo "export const settings = { host:\"http://localhost:3000\" };" > src/config.js
       - name: Prepare prerequisites
         run: |
           npm install
