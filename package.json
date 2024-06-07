@@ -4,7 +4,6 @@
     "description": "Online Book Library Single Page Application",
     "main": "index.html",
     "scripts": {
-        "test": "mocha tests",
         "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
         "start-fe": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
         "start-be": "cd server && node server.js",
@@ -19,9 +18,7 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.44.1",
-        "chai": "4.3.4",
         "http-server": "0.12.3",
-        "mocha": "8.3.2",
         "playwright-chromium": "1.9.2"
     }
 }

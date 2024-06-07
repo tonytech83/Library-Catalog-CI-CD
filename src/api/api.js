@@ -1,6 +1,10 @@
-export const settings = {
-    host: '',
-};
+import * as config from "../config.js";
+
+export const settings = config.settings;
+
+// export const settings = {
+//     host: '',
+// };
 
 async function request(url, options) {
     try {
