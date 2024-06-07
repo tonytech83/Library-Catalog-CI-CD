@@ -71,8 +71,8 @@ jobs:
           service-id: ${{ secrets.SERVICE_BE_ID }}
           api-key: ${{ secrets.RENDER_API }}
 
-  deploy-deploy-backend:
-    needs: ui-tests
+  deploy-frontend:
+    needs: deploy-backend
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-lastest
 
