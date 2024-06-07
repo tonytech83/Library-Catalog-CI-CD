@@ -1,5 +1,4 @@
-import { config } from "process";
-import * as config from "../config.js"
+import * as config from "../config.js";
 
 // export const settings = {
 //     host: '',
