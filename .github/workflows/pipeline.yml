@@ -26,11 +26,9 @@ jobs:
       - name: Run Back-End
         run: npm run start-be &
       - name: Wait for Back-End to start
-        run: sleep 10
+        run: sleep 5
       - name: Run Front-End
         run: npm run start-fe &
-      - name: Wait for Front-End to start
-        run: sleep 10
   
   ui-tests:
     needs: build
